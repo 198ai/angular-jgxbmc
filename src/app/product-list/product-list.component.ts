@@ -12,7 +12,12 @@ export class ProductListComponent {
   ngOnInit() {
     //页面刷新就会触发
     console.log('傻逼');
+    this.set(1,20);
+    let button:any= document.getElementById("button");
+    console.log(button.innerHTML);//取值
   }
+  set(key:any,value:any){ localStorage.setItem(key,JSON.stringify(value))
+}
   share() {
     window.alert('The product has been shared!');
   }
@@ -23,6 +28,7 @@ export class ProductListComponent {
   get() {
     console.log(this.keyword);
   }
+
 }
 
 /*
